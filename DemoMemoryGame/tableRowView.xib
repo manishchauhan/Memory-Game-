@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="highscoreRow" id="Kpd-mf-wG8" customClass="highScoreRowTableViewCell" customModule="DemoMemoryGame" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kpd-mf-wG8" id="JUe-oK-ROF">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="I5i-HZ-cqe">
+                        <rect key="frame" x="235" y="0.0" width="77" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="77" id="Cri-Hz-Xmd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RANK" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="2hW-W7-SS3">
+                        <rect key="frame" x="8" y="0.0" width="80" height="43"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="cFO-Cy-Zug">
+                        <rect key="frame" x="117" y="0.0" width="87" height="43"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2hW-W7-SS3" firstAttribute="baseline" secondItem="cFO-Cy-Zug" secondAttribute="baseline" id="24p-ng-lTU"/>
+                    <constraint firstItem="2hW-W7-SS3" firstAttribute="top" secondItem="JUe-oK-ROF" secondAttribute="top" id="5gM-bQ-Kvi"/>
+                    <constraint firstAttribute="bottom" secondItem="2hW-W7-SS3" secondAttribute="bottom" id="Dub-xU-Jii"/>
+                    <constraint firstItem="cFO-Cy-Zug" firstAttribute="centerX" secondItem="JUe-oK-ROF" secondAttribute="centerX" id="GfU-GL-ihN"/>
+                    <constraint firstItem="cFO-Cy-Zug" firstAttribute="firstBaseline" secondItem="I5i-HZ-cqe" secondAttribute="firstBaseline" id="ViI-eb-kXT"/>
+                    <constraint firstItem="I5i-HZ-cqe" firstAttribute="leading" secondItem="cFO-Cy-Zug" secondAttribute="trailing" constant="31" id="cb1-Va-rIx"/>
+                    <constraint firstItem="I5i-HZ-cqe" firstAttribute="trailing" secondItem="JUe-oK-ROF" secondAttribute="trailingMargin" id="slq-b6-Lq6"/>
+                    <constraint firstItem="2hW-W7-SS3" firstAttribute="leading" secondItem="JUe-oK-ROF" secondAttribute="leadingMargin" id="tIs-dG-BY3"/>
+                    <constraint firstItem="cFO-Cy-Zug" firstAttribute="baseline" secondItem="I5i-HZ-cqe" secondAttribute="baseline" id="tb8-Ss-jDe"/>
+                    <constraint firstItem="cFO-Cy-Zug" firstAttribute="leading" secondItem="2hW-W7-SS3" secondAttribute="trailing" constant="29" id="wk5-Vd-Lae"/>
+                    <constraint firstItem="2hW-W7-SS3" firstAttribute="firstBaseline" secondItem="cFO-Cy-Zug" secondAttribute="firstBaseline" id="zaE-cw-PHJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.5" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="rankText" destination="2hW-W7-SS3" id="eOv-Ci-YqB"/>
+                <outlet property="scoreText" destination="I5i-HZ-cqe" id="4Lz-3w-mxq"/>
+                <outlet property="usernameText" destination="cFO-Cy-Zug" id="dQd-k0-AYI"/>
+            </connections>
+            <point key="canvasLocation" x="458" y="317"/>
+        </tableViewCell>
+    </objects>
+</document>
